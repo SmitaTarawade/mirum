@@ -1,0 +1,24 @@
+<article class="row">
+    <div class="col-sm-12">
+        <h4 class="text-uppercase text-center">articles</h4>
+    </div>
+    <div id="myCarousel" class="article-container" class="article-container carousel slide" data-ride="carousel">       
+        <div class="carousel-inner">
+            <div class="article-item item col-sm-12" *ngFor="let article of articles; let i = index" [ngClass]="{'active' : i == 0}">
+                <div class="article-img col-sm-5"><img class="img-responsive" [src]="article.imgPath"></div>
+                <div class="article-description col-sm-7">
+                    <h4 class="article-heading">{{article.heading}}</h4>
+                    <p class="article-text" [ngClass]="{'scroll': isScroll}">{{article.text}}</p>
+                    <a class="read-more text-uppercase" (click)="toggleText()" [hidden]="isScroll">read more...</a>
+                    <a class="read-more text-uppercase" (click)="toggleText()" [hidden]="!isScroll">read less...</a>
+                </div>
+            </div>    
+        </div> 
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" *ngFor="let slide of articles; let i = index" 
+            [attr.data-slide-to]="i"
+            [ngClass]="{'active': i == 0}"
+            ></li>            
+        </ol>
+    </div>
+</article>

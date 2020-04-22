@@ -1,0 +1,33 @@
+@import '../../assets/common.scss';
+
+footer {
+    background-color: $footerBg;
+    background-image: url(../../assets/img/texture.png);
+    color: $white;
+    padding: 30px 0;
+    .footer-row {
+        font-size: 12px;
+        padding: 10px 0;
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }        
+        .icon {
+            display: inline-flex;
+            i {
+                display: inline-block;
+                background: url(../../assets/img/social.png) no-repeat; 
+                background-size: 100%;
+                width: 30px;
+                height: 30px;
+                margin: 0 5px;
+                &.facebook {background-position: 0 0;}
+                &.twitter {background-position: 0 -172px;}                
+                &.linkedin {background-position: 0 -288px;}
+                &.youtube {background-position: 0 -404px;}
+            }                        
+            
+        }
+    }
+}

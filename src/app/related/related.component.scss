@@ -1,0 +1,29 @@
+@import '../../assets/common.scss';
+
+section{    
+    background-color: $realtedBg;
+    background-image: url(../../assets/img/texture.png);
+    color: $relatedColor;
+    padding: 30px 0;
+    .related-container {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        .related-item {
+            width: 350px;
+            text-align: center;
+            .related-img {               
+                margin:30px 15px;
+                img {
+                    max-height: 250px;
+                }
+            }
+        }
+    }   
+}
+
+@include max-width(640px) {
+    .related-item {
+        flex-basis: 50%;        
+    }
+}

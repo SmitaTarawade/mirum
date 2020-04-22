@@ -1,0 +1,20 @@
+$articleBg : #008CC2;
+$white: #fff;
+$activeArticle: #E58123;
+$realtedBg : #DBEEFC;
+$relatedColor: #3F3F3F;
+$border-top: #707D83;
+$calculatorBg: #282828;
+$btnBg: #FEB703;
+$black: #000;
+$footerBg : #3F3F3F;
+@mixin max-width($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@font-face {
+    font-family: calciFont, Verdana, Geneva, Tahoma, sans-serif;
+    src: url(../../assets/img/digital-7.ttf);
+ }

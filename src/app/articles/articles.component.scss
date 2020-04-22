@@ -1,0 +1,68 @@
+$articleBg : #008CC2;
+$white: #fff;
+$activeArticle: #E58123;
+
+article {    
+    background-color: $articleBg;
+    background-image: url(../../assets/img/texture.png);
+    color: $white;
+    padding: 30px 0;
+    .article-container {
+        padding: 25px 15px;
+        .article-item {
+            padding: 15px 30px;
+            .article-img {
+                padding: 30px 15px;
+            }
+            .article-heading {
+                font-weight: 600;
+            }
+            p.article-text {
+                line-height: 1.8;   
+                max-height: 270px;
+                overflow: hidden;
+                margin-bottom: 20px;     
+                padding-right: 15px;        
+                &.scroll {
+                    overflow-y: scroll;
+                }
+            }                        
+            .read-more {
+                color: $white;
+                padding: 15px 0;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    }
+        
+    .carousel-indicators {
+        bottom: 0px;
+        li {
+            border-radius: 0px;
+            border-color: transparent; 
+            margin: 0 7px;
+            background-color: $white;
+            &:hover, &.active {
+                background-color: $activeArticle;
+            }
+        }
+
+    }
+}
+.article-text::-webkit-scrollbar-track
+{
+	background-color: $activeArticle;
+}
+
+.article-text::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: $activeArticle;
+}
+
+.article-text::-webkit-scrollbar-thumb
+{	
+	
+	background-color: $white;
+}

@@ -1,0 +1,64 @@
+<section class="row">
+    <div class="col-sm-12">
+        <h4 class="text-uppercase text-center">
+            Lorem ipsum
+        </h4>
+        <h4 class="text-uppercase text-center">
+            Calculator
+        </h4>
+    </div>
+    <div class="calculator-container col-sm-12">
+        <div class="col-sm-6 calculator col-sm-offset-3">
+            <div class="border-bottom row">
+                <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="amount">amount</label>
+                    <input type="number" class="form-control full-width" id="amount" 
+                    placeholder="0" name="amount" ng-pattern="/^[0-9]{1,7}$/" 
+                    [(ngModel)]="amount" value="amount"
+                    (focusout)="setAmount(amount)">
+                </div>
+                
+            </div>
+            <div class="col-sm-6 border-right">
+                <div class="form-group ">
+                    <label for="term">Term</label>
+                    <input type="number" class="form-control small-width" id="term" placeholder="0" name="term" 
+                    ng-pattern="/^[0-9]{1,7}$/"
+                    [(ngModel)]="term" value="term"
+                    (focusout)="setTerm(term)"
+                    >                    
+                    <label for="term" class="hidden-sm"  style="display: inline;">years</label>                  
+                </div>
+                
+            </div>  
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="rate">rate</label>
+                    <input type="number" class="form-control small-width" id="rate" placeholder="0" name="rate" 
+                    ng-pattern="/^[0-9]{1,7}$/"
+                    [(ngModel)]="rate" value="rate"
+                    (focusout)="setRate(rate)"
+                    >
+                    <label for="rate" class="hidden-sm" style="display: inline;">%</label>
+                  </div>
+            </div>
+            </div>   
+            <div class="col-sm-12">
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-default text-uppercase calculate-btn" (click)="calculateInterest()">Calculate</button>
+                </div>                
+            </div>                    
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="total">total</label>
+                    <input type="text" class="form-control full-width" id="total" placeholder="0" name="total" readonly
+                    [ngModel]="total | number" value="total"                    
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
